@@ -1,4 +1,4 @@
-var vg_1 = "MapOrigin.json";
+var vg_1 = "MapOrigin.Json";
 vegaEmbed("#MapOrigin", vg_1).then(function(result) {
 // Access the Vega view instance
 //(https://vega.github.io/vega/docs/api/view/) as result.view
