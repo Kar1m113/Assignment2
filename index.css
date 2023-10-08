@@ -21,13 +21,22 @@ width: 19%;
     width: 33.3%;
   }
   .column4 {
-    float: center;
-    width: 33.3%;
-  }
-  .column5 {
     float: right;
     width: 33.3%;
   }
+  .column5 {
+    float: left;
+    width: 33.33%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
-
+.p{
+    color: #ffffff;
+}
 
