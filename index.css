@@ -16,5 +16,18 @@
 float: right;
 width: 19%;
 }
+.column3 {
+    float: left;
+    width: 33.3%;
+  }
+  .column4 {
+    float: center;
+    width: 33.3%;
+  }
+  .column5 {
+    float: right;
+    width: 33.3%;
+  }
+
 
 
