@@ -39,4 +39,8 @@ width: 19%;
 .p{
     color: #ffffff;
 }
+.column6{
+    float: left;
+    width: 30%;
+}
 
