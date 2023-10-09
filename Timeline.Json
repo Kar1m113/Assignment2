@@ -1,20 +1,19 @@
 
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
-  "height":700,
-  "title": "Timeline of Refugees from 1951-2022",
+  "width": 700,
+  "height":400,
+  "title": "Timeline of Refugees from 2012-2022",
   "data": {
-  "url": "https://raw.githubusercontent.com/Kar1m113/3179/main/5CountriesRefugeesGood.csv"
+  "url": "https://raw.githubusercontent.com/Kar1m113/Assignment2/main/5CountriesRefugeesChanged.csv"
   },
   "selection": {
     "continent_highlight": {
     "type": "multi",
-    "fields": ["CountryOfAsylum"],
+    "fields": ["Country of asylum (ISO)"],
     "bind": "legend"
   }
   },
-  "width":{"step": 15},
   "mark":{"type": "line","point":"true"},
   "encoding": {
     "x":{
@@ -24,19 +23,20 @@
     "y":{
       "field":"RefugeesTotal",
       "type": "quantitative",
-      "scale":{"type": "linear"}
+      "scale":{"type": "linear"},
+      "title":"Number of Refugees"
     },
     "color":{
-      "field":"CountryOfAsylum",
+      "field":"Country of asylum (ISO)",
       "title":"Country of Asylum",
       "type": "nominal",
       "scale":{
         "domain":[
-        "Australia",
-        "Malaysia",
-        "United States of America",
-        "United Kingdom of Great Britain and Northern Ireland",
-        "Netherlands (Kingdom of the)"
+        "AUS",
+        "MYS",
+        "USA",
+        "GBR",
+        "NLD"
         ],
       "range":[
         "#FF7700",
@@ -52,7 +52,7 @@
       "value":0
     },
     "tooltip":[
-      {"field":"RefugeesTotal", "type": "quantitative","title":"Refugees in Total:"},
+      {"field":"RefugeesTotal", "type": "quantitative","title":"Number of Refugees in Total:"},
       {"field":"Year","type":"nominal","title":"Year:"},
       {"field":"CountryOfAsylum","type": "nominal","title":"Country of Asylum:"}
     ]
