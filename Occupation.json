@@ -1,5 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 722,
+  "height":288,
   "data": {"url": "https://raw.githubusercontent.com/Kar1m113/Assignment2/main/OccupationTest.csv"},
   "mark": "bar",
   "encoding": {
@@ -11,5 +13,12 @@
           {"field":"Group","type":"nominal","title":"Gender:"},
           {"field":"JobTitle","title":"Occupation:"}
       ]
+  },
+  "config": {
+  "style": {
+    "cell": {
+      "stroke": "transparent"
+    }
   }
+}
 }

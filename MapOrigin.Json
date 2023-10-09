@@ -1,9 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Asylum Seekers and Origin Country",
-  "width": 700,
+  "width": 749,
   "height": 400,
   "projection": {"type": "equalEarth"},
+  "background":"skyblue",
 "layer": [
   {
 "data":{
@@ -53,5 +54,12 @@
   }
   
   }
-]
+],
+"config": {
+  "style": {
+    "cell": {
+      "stroke": "transparent"
+    }
+  }
+}
 }
