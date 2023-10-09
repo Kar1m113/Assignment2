@@ -1,20 +1,15 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title":"Total Number of Workers in each Occupation",
-    "width": 600,
-    "height":400,
-    "data": {
-      "url": "https://raw.githubusercontent.com/Kar1m113/Assignment2/main/Occupation2.csv"
-    },
-    "mark": "bar",
-    "encoding": {
-      "x": {"field": "JobTitle"},
-      "y": {"field": "Value", "type": "quantitative","title":"Number of Mirgant Workers"},
-      "xOffset": {"field": "Type"},
-      "color": {"field": "Group"},
-      "tooltip":[
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/Kar1m113/Assignment2/main/OccupationTest.csv"},
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "JobTitle"},
+    "y": {"aggregate": "sum", "field": "Value"},
+    "color": {"field": "Group"},
+    "tooltip":[
           {"field":"Value", "type": "quantitative","title":"Number of Workers:"},
-          {"field":"Group","type":"nominal","title":"Gender:"}
-        ]
-    }
+          {"field":"Group","type":"nominal","title":"Gender:"},
+          {"field":"JobTitle","title":"Occupation:"}
+      ]
   }
+}
