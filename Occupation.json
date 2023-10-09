@@ -9,9 +9,9 @@
     "y": {"aggregate": "sum", "field": "Value"},
     "color": {"field": "Group"},
     "tooltip":[
-          {"field":"Value", "type": "quantitative","title":"Number of Workers:"},
-          {"field":"Group","type":"nominal","title":"Gender:"},
-          {"field":"JobTitle","title":"Occupation:"}
+          {"field":"Value", "type": "quantitative","title":"Number of Workers"},
+          {"field":"Group","type":"nominal","title":"Gender"},
+          {"field":"JobTitle","title":"Occupation"}
       ]
   },
   "config": {

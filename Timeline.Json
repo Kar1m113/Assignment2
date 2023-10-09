@@ -52,9 +52,9 @@
       "value":0
     },
     "tooltip":[
-      {"field":"RefugeesTotal", "type": "quantitative","title":"Number of Refugees in Total:"},
-      {"field":"Year","type":"nominal","title":"Year:"},
-      {"field":"CountryOfAsylum","type": "nominal","title":"Country of Asylum:"}
+      {"field":"RefugeesTotal", "type": "quantitative","title":"Number of Refugees in Total"},
+      {"field":"Year","type":"nominal","title":"Year"},
+      {"field":"CountryOfAsylum","type": "nominal","title":"Country of Asylum"}
     ]
   },
   "config": {
