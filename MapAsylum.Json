@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Asylum Seekers and Refuge Country",
+  "title": {"text":"Timeline of Refugees from 2012-2022", "color":"skyblue  "},
   "width": 745,
   "height": 400,
   "projection": {"type": "equalEarth"},
