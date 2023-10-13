@@ -1,9 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A simple bar chart with rounded corners at the end of the bar.",
   "width": 790,
   "height":400,
-  "data": {
+ "data": {
     "values": [
       {"category": "No income", "value": 10854},
       {"category": "$1–$299", "value": 81912},
@@ -16,11 +15,31 @@
       {"category": "$1,000–$1,499", "value": 296826}
     ]
   },
-  "mark": {"type": "bar", "cornerRadiusEnd": 4},
-  "encoding": {
-    "x": {"field": "category", "type": "ordinal","sort":["$3,000 or more","$2,000–$2,999","$1,500–$1,999","$1,000–$1,499","$650–$999","$300–$649","$1–$299","No income","Not stated"],"title":"Weekly Income Range of Migrant Workers"},
-    "y": {"field": "value", "type": "quantitative","title":"Total Number of Migrant Workers"}
-  },
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "category", "type": "ordinal","sort":["$3,000 or more","$2,000–$2,999","$1,500–$1,999","$1,000–$1,499","$650–$999","$300–$649","$1–$299","No income","Not stated"],"title":"Weekly Income Range of Migrant Workers"},
+        "y": {
+          "aggregate": "mean",
+          "field": "value",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": "rule",
+      "encoding": {
+        "y": {
+          "aggregate": "mean",
+          "field": "value",
+          "type": "quantitative"
+        },
+        "color": {"value": "red"},
+        "size": {"value": 3}
+      }
+    }
+  ],
   "config": {
     "style": {
       "cell": {
