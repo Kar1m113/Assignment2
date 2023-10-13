@@ -1,12 +1,11 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {"view": {"stroke": "transparent"}},
   "width": 673,
   "height":400,
-  "title": {"text":"Timeline of Refugees from 2012-2022", "color":"white"},
-  "data": {
-  "url": "https://raw.githubusercontent.com/Kar1m113/Assignment2/main/5CountriesRefugeesChanged.csv"
-  },
+  
+"layer": [
+{
   "selection": {
     "continent_highlight": {
     "type": "multi",
@@ -14,6 +13,10 @@
     "bind": "legend"
   }
   },
+  "data": {
+  "url": "https://raw.githubusercontent.com/Kar1m113/Assignment2/main/5CountriesRefugeesChanged.csv"
+  },
+
   "mark":{"type": "line","point":"true"},
   "encoding": {
     "x":{
@@ -28,7 +31,7 @@
     },
     "color":{
       "field":"Country of asylum (ISO)",
-      "title":"Country of Asylum",
+      "title":"Country of Asylum (ISO)",
       "type": "nominal",
       "scale":{
         "domain":[
@@ -47,21 +50,66 @@
       ]
       }
     },
+    "tooltip":[
+      {"field":"CountryOfAsylum","type": "nominal","title":"Country"},
+      {"field":"RefugeesTotal","type": "quantitative","title":"Number of Refugees"}
+    ],
     "opacity":{
       "condition":{"selection":"continent_highlight", "value":0.6},
       "value":0
-    },
-    "tooltip":[
-      {"field":"RefugeesTotal", "type": "quantitative","title":"Number of Refugees in Total"},
-      {"field":"Year","type":"nominal","title":"Year"},
-      {"field":"CountryOfAsylum","type": "nominal","title":"Country of Asylum"}
-    ]
-  },
-  "config": {
-    "style": {
-      "cell": {
-        "stroke": "transparent"
-      }
     }
   }
-  }
+  
+},
+{
+  "data": {
+    "values":[
+            {"TestCountry": "Australia", "TestTotalNumberRefugees": 31000,"TestYear":2075},
+            {"TestCountry": "Netherlands", "TestTotalNumberRefugees": 195000,"TestYear":2095},
+            {"TestCountry": "Great Britain", "TestTotalNumberRefugees": 275000,"TestYear":2075},
+            {"TestCountry": "United States of America", "TestTotalNumberRefugees": 275000,"TestYear":100},
+            {"TestCountry": "Malaysia", "TestTotalNumberRefugees": 115000,"TestYear":2075}
+          ]
+          
+          },
+    "encoding": {
+            "text": {"field": "TestCountry", "type": "nominal"},
+            "color": {"value": "black"},
+            "x": {"field": "TestYear", "type": "quantitative","axis":null},
+            "y": {"field": "TestTotalNumberRefugees", "type": "quantitative"},
+            "opacity": {
+              "condition": {
+                "test": "datum.TestCountry == 'United States of America' || datum.TestCountry == 'Australia'||datum.TestCountry =='Netherlands' || datum.TestCountry =='Malaysia'||datum.TestCountry== 'Great Britain'",
+                "value": 1
+              },
+              "value": 0
+            }
+            
+          },
+          "transform": [
+            {"calculate": "datum.TestCountry",
+              "as": "text_annotation_raw"},
+            {
+              "calculate": "split(datum.text_annotation_raw,';')",
+              "as": "text_annotation"
+            }
+          ],
+      "layer": [
+            {"mark": {"type": "circle","fill":null}},
+            {
+              "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "middle",
+                "fontSize": 15,
+                "fontWeight":"bold",
+                "dy": -10
+              },
+              "encoding": {
+                "text":{"field":"text_annotation"}
+              }
+            }
+          ]
+}
+]     
+}

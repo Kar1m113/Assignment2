@@ -21,21 +21,28 @@
       "encoding": {
         "x": {"field": "category", "type": "ordinal","sort":["$3,000 or more","$2,000–$2,999","$1,500–$1,999","$1,000–$1,499","$650–$999","$300–$649","$1–$299","No income","Not stated"],"title":"Weekly Income Range of Migrant Workers"},
         "y": {
-          "aggregate": "mean",
+          "aggregate": "sum",
           "field": "value",
           "type": "quantitative"
-        }
+        },
+        "tooltip":[
+          {"field":"category","title":"Income Range"},
+          {"field":"value","title":"Number of Migrants"}
+        ]
       }
+      
     },
+    
     {
       "mark": "rule",
       "encoding": {
         "y": {
           "aggregate": "mean",
           "field": "value",
-          "type": "quantitative"
+          "type": "quantitative",
+          "title":"Number of Migrants/Asylum Seekers"
         },
-        "color": {"value": "red"},
+        "color": {"value": "black"},
         "size": {"value": 3}
       }
     }
