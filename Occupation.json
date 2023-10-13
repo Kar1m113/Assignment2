@@ -1,24 +1,24 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 722,
+ "width": 722,
   "height":288,
-  "data": {"url": "https://raw.githubusercontent.com/Kar1m113/Assignment2/main/OccupationTest.csv"},
-  "mark": "bar",
-  "encoding": {
-    "x": {"field": "JobTitle"},
-    "y": {"aggregate": "sum", "field": "Value"},
-    "color": {"field": "Group"},
-    "tooltip":[
-          {"field":"Value", "type": "quantitative","title":"Number of Workers"},
-          {"field":"Group","type":"nominal","title":"Gender"},
-          {"field":"JobTitle","title":"Occupation"}
-      ]
-  },
-  "config": {
-  "style": {
-    "cell": {
-      "stroke": "transparent"
+  "data": {"url": "https://raw.githubusercontent.com/Kar1m113/Assignment2/main/OccupationTest2.csv"},
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "JobTitle"},
+        "y": {"aggregate": "sum","field":"Value"},
+        "color":{"field":"Group"}
+      }
+    },
+    {
+      "mark":"rule",
+      "encoding": {
+        "y": {"aggregate": "median", "field": "Value"},
+        "color": {"value": "red"},
+        "size": {"value": 5}
+      }
     }
-  }
-}
+  ]
 }
