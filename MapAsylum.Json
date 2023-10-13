@@ -1,28 +1,28 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {"text":"Timeline of Refugees from 2012-2022", "color":"skyblue  "},
-  "width": 745,
+  "width": 645,
   "height": 400,
   "projection": {"type": "equalEarth"},
   "background":"skyblue",
 "layer": [
   {
-"data":{
-  "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
-  "format":{"type":"topojson","feature": "oceans"}
+    "data":{
+      "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+      "format":{"type":"topojson","feature": "oceans"}
+       },
+      "mark":{"type": "geoshape","fill":"skyblue"}
   },
-  "mark":{"type": "geoshape","fill":"skyblue"}
-},
-{
+  {
       "data":{
         "url": "https://raw.githubusercontent.com/Kar1m113/Assignment2/main/ne_110m_graticules_30.json",
         "format":{"type":"topojson","feature": "ne_110m_graticules_30"}
     },
     "mark": {"type": "geoshape","fill": null, "stroke": "white"}
 
-},
+  },
 
-{
+  {
       "data": {
         "url": "https://raw.githubusercontent.com/Kar1m113/Assignment2/main/ne_110m.json",
         "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
@@ -39,21 +39,85 @@
         }
       },
       {"calculate": "datum.Asylum + 0.1", "as": "Asylum-seekers"}
-    ],
+        ],
     "mark": {"type": "geoshape"},
     "encoding": {
       "color": {
         "field": "Asylum-seekers",
         "type": "quantitative",
-        "scale": {"type": "log"}
+        "scale": {"type": "log"},
+        "title":"Total Number of Asylum Seekers"
       },
       "tooltip": [
         {"field": "properties.NAME", "type": "nominal", "title": "Country"},
         {"field": "Asylum-seekers", "type": "quantitative"}
       ]
-  }
-  
-  }
+        }
+  },
+  {
+    "data": {
+            "url": "https://raw.githubusercontent.com/Kar1m113/Assignment2/main/ContinentsNAMES.csv"
+          },
+    "encoding": {
+            "text": {"field": "Continent", "type": "nominal"},
+            "color": {"value": "black"},
+            "longitude": {"field": "Longitude", "type": "quantitative"},
+            "latitude": {"field": "Latitude", "type": "quantitative"},
+            "opacity": {
+              "condition": {
+                "test": "datum.Continent == 'Europe' || datum.Country == 'Australia'||datum.Continent =='South America' || datum.Continent =='Africa'||datum.Continent== 'North America'|| datum.Continent=='Asia'",
+                "value": 1
+              },
+              "value": 0
+            }
+          },
+      "layer": [
+            {"mark": {"type": "circle","fill":null}},
+            {
+              "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "middle",
+                "fontSize": 10,
+                "fontWeight":"bold",
+                "dy": -10
+              }
+            }
+          ]
+  },
+  {
+    "data": {
+            "url": "https://raw.githubusercontent.com/Kar1m113/Assignment2/main/OceanNames.csv"
+          },
+    "encoding": {
+            "text": {"field": "Ocean", "type": "nominal"},
+            "color": {"value": "black"},
+            "longitude": {"field": "Longitude", "type": "quantitative"},
+            "latitude": {"field": "Latitude", "type": "quantitative"},
+            "opacity": {
+              "condition": {
+                "test": "datum.Ocean == 'Pacific Ocean'|| datum.Ocean=='Atlantic Ocean' || datum.Ocean =='Indian Ocean'",
+                "value": 1
+              },
+              "value": 0
+            }
+          },
+      "layer": [
+            {"mark": {"type": "circle","fill":null}},
+            {
+              "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "middle",
+                "fontSize": 7,
+                "fontWeight":"bold",
+                "dy": -10
+              }
+            }
+          ]
+    }
+
+
 ],
 "config": {
   "style": {
