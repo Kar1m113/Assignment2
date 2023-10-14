@@ -45,6 +45,78 @@
         "color": {"value": "black"},
         "size": {"value": 3}
       }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": 5,
+        "fontSize": 12,
+        "font": "Arial"
+      },
+      "encoding": {
+        "x": {"value": 500},
+        "y": {"value": 10},
+        "color": {"value": "black"},
+        "text": {"value": ["It can be seen that most migrants have an", " income that is between $650–$999 AUD"]}
+        
+      }
+    },
+    {
+      "mark": {"type": "rule"},
+      "encoding": {
+        "x": {"value":434},
+        "y": {"value": 50},
+        "x2": {"value": 500},
+        "y2": {"value": 20},
+        "color": {"value": "black"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": 5,
+        "fontSize": 15,
+        "font": "Arial"
+      },
+      "encoding": {
+        "x": {"value": 0},
+        "y": {"value": 220},
+        "color": {"value": "black"},
+        "text": {"value": ["Mean"]}
+        
+      }
+    },
+    {
+    
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": 5,
+        "fontSize": 12,
+        "font": "Arial"
+      },
+      "encoding": {
+        "x": {"value": 100},
+        "y": {"value": 10},
+        "color": {"value": "black"},
+        "text": {"value": ["The median sits between the income range", " of $650-$999 AUD"]}
+        
+      }
+    },
+    {
+      "mark": {"type": "rule"},
+      "encoding": {
+        "x": {"value":195},
+        "y": {"value": 40},
+        "x2": {"value": 356},
+        "y2": {"value": 53},
+        "color": {"value": "black"}
+      }
     }
   ],
   "config": {

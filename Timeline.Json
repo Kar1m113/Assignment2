@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "config": {"view": {"stroke": "transparent"}},
   "width": 673,
-  "height":400,
+  "height":416,
   
 "layer": [
 {
@@ -68,7 +68,10 @@
             {"TestCountry": "Netherlands", "TestTotalNumberRefugees": 195000,"TestYear":2095},
             {"TestCountry": "Great Britain", "TestTotalNumberRefugees": 275000,"TestYear":2075},
             {"TestCountry": "United States of America", "TestTotalNumberRefugees": 275000,"TestYear":100},
-            {"TestCountry": "Malaysia", "TestTotalNumberRefugees": 115000,"TestYear":2075}
+            {"TestCountry": "Malaysia", "TestTotalNumberRefugees": 115000,"TestYear":2075},
+            {"TestCountry": "It can be seen that Great Britain", "TestTotalNumberRefugees": 250000,"TestYear":1055},
+            {"TestCountry": "had the greatest increase in number", "TestTotalNumberRefugees": 225000,"TestYear":1055},
+            {"TestCountry": "of refugees by 140% from 2021-2022", "TestTotalNumberRefugees": 205000,"TestYear":1055}
           ]
           
           },
@@ -79,7 +82,7 @@
             "y": {"field": "TestTotalNumberRefugees", "type": "quantitative"},
             "opacity": {
               "condition": {
-                "test": "datum.TestCountry == 'United States of America' || datum.TestCountry == 'Australia'||datum.TestCountry =='Netherlands' || datum.TestCountry =='Malaysia'||datum.TestCountry== 'Great Britain'",
+                "test": "datum.TestCountry == 'United States of America' || datum.TestCountry == 'Australia'||datum.TestCountry =='Netherlands' || datum.TestCountry =='Malaysia'||datum.TestCountry== 'Great Britain'||datum.TestCountry== 'It can be seen that Great Britain'||datum.TestCountry== 'had the greatest increase in number'||datum.TestCountry== 'of refugees by 140% from 2021-2022'",
                 "value": 1
               },
               "value": 0
@@ -106,7 +109,12 @@
                 "dy": -10
               },
               "encoding": {
-                "text":{"field":"text_annotation"}
+                "text":{"field":"text_annotation"},
+                "opacity":{
+                "condition":{"selection":"continent_highlight",  "value":1},
+                "value":0
+                }
+
               }
             }
           ]

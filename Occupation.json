@@ -24,6 +24,60 @@
         "color": {"value": "Black"},
         "size": {"value": 5}
       }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": 5,
+        "fontSize": 12,
+        "font": "Arial"
+      },
+      "encoding": {
+        "x": {"value": 425},
+        "y": {"value": 10},
+        "color": {"value": "black"},
+        "text": {"value": ["Health Professionals have the most amount of Female", "Migrants and Asylum seekers with 64,977"]}
+        
+      }
+    },
+    {
+      "mark": {"type": "rule"},
+      "encoding": {
+        "x": {"value":406},
+        "y": {"value": 50},
+        "x2": {"value": 427},
+        "y2": {"value": 25},
+        "color": {"value": "black"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "dx": 5,
+        "fontSize": 12,
+        "font": "Arial"
+      },
+      "encoding": {
+        "x": {"value": 410},
+        "y": {"value": 70},
+        "color": {"value": "black"},
+        "text": {"value": ["Specialist Managers have the most amount of Male", "Migrants and Asylum seekers with 55,194"]}
+        
+      }
+    },
+    {
+      "mark": {"type": "rule"},
+      "encoding": {
+        "x": {"value":610},
+        "y": {"value": 100},
+        "x2": {"value": 697},
+        "y2": {"value": 205},
+        "color": {"value": "black"}
+      }
     }
   ]
 }
