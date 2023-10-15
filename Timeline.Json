@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "config": {"view": {"stroke": "transparent"}},
   "width": 673,
-  "height":416,
+  "height":414,
   
 "layer": [
 {

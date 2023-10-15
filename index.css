@@ -1,45 +1,35 @@
-.column1 {
-    float: left;
-    width: 50%;
-  }
-.footer {
-    background-color: #ffffff;
-    text-align: center;
-    padding: 50px;
+h1 {text-align: center; font-family: "Sans-Serif"; font-weight: bolder;}
+
+h2 {text-align: center;font-family: "Sans-Serif"; font-weight: bolder; font-size:xx-large;}  
+     
+h3{text-align: center;font-family: "Sans-Serif"; font-weight: bolder; font-size: x-large;}
+     
+h4 {text-align: center;font-family: "Sans-Serif";} 
+     
+h6{text-align: center;font-family: "Sans-Serif";}
     
-}
-.column2{
-float: right;
-width: 19%;
-}
-.column3 {
+p{text-align:center;font-family: "Sans-Serif";}
+    /* Set additional styling options for the columns */
+    
+    .column {
     float: left;
+    }
+
+    /* Set width length for the left, right and middle columns */
+    .left {
+    width: 50%;
+    }
+
+    .middle {
     width: 33.3%;
-  }
-  .column4 {
-    float: right;
-    width: 33.3%;
-  }
-  .column5 {
-    float: left;
-    width: 33.33%;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
+    }
+    
+    .right {
+    width: 50%;
+    }
+
+    .row:after {
     content: "";
     display: table;
     clear: both;
-  }
-
-.p{
-    color: #ffffff;
-}
-.column6{
-    float: left;
-    width: 25%;
-}
-.column7{
-    float: left;
-    width: 66.6%;
-}
+    }

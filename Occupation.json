@@ -7,11 +7,11 @@
     {
       "mark": "bar",
       "encoding": {
-        "x": {"field": "JobTitle"},
+        "x": {"field": "JobTitle" ,"title":"Occupation"},
         "y": {"aggregate": "sum","field":"Value"},
         "color":{"field":"Group"},
         "tooltip":[
-          {"field":"JobTitle","title":"Income Range"},
+          {"field":"JobTitle","title":"Occupation"},
           {"field":"Value","title":"Number of Migrants"},
           {"field":"Group","title":"Gender"}
         ]

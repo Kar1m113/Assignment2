@@ -15,37 +15,112 @@
 <script src="Occupation.js"></script>
 <link rel="stylesheet" href="index.css">
 
-<title>Vega-Lite graph </title>
-
-</head>
-<body>
-    <h1 >Data Visualisation 2</h1>
-    <h2>Refugees Around the World</h2>
-    <div class="column1" id="MapOrigin"></div>
-    <div class="column1" id="MapAsylum"></div>
-    <div class="footer">Text</div>
-
-    <h2>Refugees in Australia compared to other Nations</h2>
-    <div class="column1" id="Timeline"> </div>
-    <div class="column1">Text </div>
-    <div class="footer">Text</div>
-    <h2>Australia Migrants and Refugees</h2>
-    <div class="column1" id="Income"></div>
-    <div class="column1"></div>
-    <h1 class="p">asdfasdf
-        asdfasdfda
-        sd
-        as
-    </h1>
-    <div class="footer">TEXT
+    </style>
+ </head>
+ <body >
+<header ><h1 style="font-size: 60px"> Data Visualisation 2</h1></header>
+<header><h4 style="font-size: 30px">By Karim Hajlaoui</h4></header>
+    <header><h2 style="background-color:#3C7EC9;" >Refugees Around the World</h2></header>
+    <div class="row">
+        <div class="column left" style="background-color:#87CEEB;">
+            <h3>Where do refugees come from?</h3>
+            <p id="MapOrigin">Data..</p>
+            <p><h6>Figure 1 - Choropleth map</h6></p>
+            <p>The Choropleth map above is showing the distribution of </p>
+        <p>refugees amongst countries that they come from with darkest being</p>
+        <p>the highest number of Asylum Seekers that left that country.</p>
+        <p>Looking at the map, it can be seen that the</p>
+        <p>countries with the most refugees leaving is</p>
+        <p>Cuba, Guatemala and Honduras, with the total number of refugees</p>
+        <p>leaving are 1687480, 1571130 and 1287800 respectively.</p>
+        <p>This data illustrates the ethnicities of most refugees are</p>
+        <p> from countries in Central America.</p>
+        <p>Note. These values have been normalised with a log scale.</p>
+        </div>
+        <div class="column right" style="background-color:#87CEEB;">
+            <h3>Which countries do refugees go to?</h3>
+            <p id="MapAsylum">Data..</p>
+            <p><h6>Figure 2 - Choropleth map</h6></p>
+            <p>The Choropleth map above is showing the distribution of </p>
+        <p>refugees amongst the countries that they flee to.</p>
+        <p>The map shows that the highest number of Asylum Seekers</p>
+        <p>go to countries like Colombia, Trindad and Tobago and Jordan.</p>
+        <p>The number of Asylum Seekers leaving these countries are</p>
+        <p>223450, 180380 and 109690 respectively.</p>
+        <p>This data presents that refugees are seeking refuge in countries</p>
+        <p>that are near by their home due to the</p>
+        <p>lack of quality of life, caused by wars or poverty.</p>
+        <p>Note. These values have been normalised with a log scale.</p>
+        </div>
     </div>
-    <h1 class="p">asdfasdf
-        asdfasdfda
-        sd
-        as
-    </h1>
-    <div class="column1"></div>
-    <div class="column1" id="Occupation"></div>
-    <div></div>
-</body>
+    
+    </div>
+    <header><h2 style="background-color:#3C7EC9;"> Refugees in Australia compared to other Nations</h2></header>
+    <div class="row">
+        <div class="column left" style="background-color:#87CEEB;">
+            <h3>Timeline of refugees arriving</h3>
+            <p id="Timeline">Data..</p>
+            <p><h6>Figure 3 - Line Chart</h6></p>
+        </div>
+        <div class="column right" style="background-color:#87CEEB;">
+            <h2></h2>
+            <p style="opacity: 0.0">Data..</p>
+            <p style="opacity: 0.0">Data..</p>
+            <p>The line chart to the left is a timeline from</p>
+            <p>2012 to 2022, showing the number of refugees that</p>
+            <p>entered a country each year.</p>
+            <p>The 5 countries that were used for the line chart are</p>
+            <p>Australia, Malaysia, United States of America, Great Britain and Netherlands.</p>
+            <p>The visualisation shows that all countries are having increasing number</p>
+            <p>of refugees entering their countries. Especially for european countries,</p>
+            <p>Great Britain has had a 140% in total number of</p>
+            <p>refugees entering from 2021 to 2022. Also, the Netherlands has</p>
+            <p>increased by 119% of its total number of refugees in 2021.</p>
+            <p>This behaviour can also be seen in the USA,</p>
+            <p>where its total increased by 7%.</p>
+            <p>However, this drastic increase does not apply to Australia and </p>
+            <p>Malaysia. The total number of refugees in these countries</p>
+            <p>has plateaued in recent years.</p>
+            <p style="opacity: 0.0">Data..</p>
+        </div>
+    </div>
+    <header><h2 style="background-color:#3C7EC9;">Australia Migrants and Refugees</h2></header>
+    <div class="row">
+        <div class="column left" style="background-color:#87CEEB;">
+            <h3>Income of Australian Refugees</h3>
+            <p id="Income">Data..</p>
+            <p><h6>Figure 4 - Bar Chart</h6></p>
+            <p>Looking at the bar chart, it can be seen that</p>
+        <p>most refugees have an income that is between $650-$999.</p>
+        <p>Furthermore, the distribution along the bar chart is almost symmetrical</p>
+        <p>This means that most refugees living in Australia are</p>
+        <p>earning around $1,000, which is below the weekly income</p>
+        <p>average of $1,400.</p>
+        <p style="opacity: 0.0">Data..</p>
+        <p style="opacity: 0.0">Data..</p>
+        <p style="opacity: 0.0">Data..</p>
+        <p style="opacity: 0.0">Data..</p>
+        <p style="opacity: 0.0">Data..</p>
+        </div>
+        <div class="column right" style="background-color:#87CEEB;">
+            <h3>Occupation of Working Australian Refugees</h3>
+            <p id="Occupation">Data..</p>
+            <p><h6>Figure 5 - Stacked Bar Chart</h6></p>
+            <p>The Stacked Bar Chart illustrates the number of refugees in</p>
+            <p>certain occupations, for both male and female refugees</p>
+            <p>From the visualisation, there are certain occupations where</p>
+            <p>it is majority of males with that occupation or females.</p>
+            <p>This can be seen for Automotive Trade Workers,</p>
+            <p>where only 363 females have that occupation compared to</p>
+            <p>27,890 males. This gives a ratio of 1 female: 77 males</p>
+            <p>This distribution can be seen in other occupations such as</p>
+            <p>Construction workers and Rail/Road Drivers.</p>
+            <p>However, females are dominating other occupations such as</p>
+            <p>Carers, Professional Educators and Health Professionals</p>
+        </div>
+    </div>
+    
+    
+    </div>
+ </body>
 </html>
