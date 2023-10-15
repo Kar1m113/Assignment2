@@ -1,10 +1,11 @@
 h1 {text-align: center; font-family: "Sans-Serif"; font-weight: bolder;}
+head{background-color: #3C7EC9;}
 
 h2 {text-align: center;font-family: "Sans-Serif"; font-weight: bolder; font-size:xx-large;}  
      
 h3{text-align: center;font-family: "Sans-Serif"; font-weight: bolder; font-size: x-large;}
      
-h4 {text-align: center;font-family: "Sans-Serif";} 
+h4 {text-align: center;font-family: "Sans-Serif"; background-color: #87CEEB;} 
      
 h6{text-align: center;font-family: "Sans-Serif";}
     
