@@ -32,20 +32,6 @@
       }
       
     },
-    
-    {
-      "mark": "rule",
-      "encoding": {
-        "y": {
-          "aggregate": "mean",
-          "field": "value",
-          "type": "quantitative",
-          "title":"Number of Migrants/Asylum Seekers"
-        },
-        "color": {"value": "black"},
-        "size": {"value": 3}
-      }
-    },
     {
       "mark": {
         "type": "text",
@@ -71,23 +57,6 @@
         "x2": {"value": 500},
         "y2": {"value": 20},
         "color": {"value": "black"}
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "top",
-        "dx": 5,
-        "fontSize": 15,
-        "font": "Arial"
-      },
-      "encoding": {
-        "x": {"value": 0},
-        "y": {"value": 220},
-        "color": {"value": "black"},
-        "text": {"value": ["Mean"]}
-        
       }
     },
     {

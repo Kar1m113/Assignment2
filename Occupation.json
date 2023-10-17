@@ -18,14 +18,6 @@
       }
     },
     {
-      "mark":"rule",
-      "encoding": {
-        "y": {"aggregate": "median", "field": "Value","title":"Number of Migrants/Asylum Seekers"},
-        "color": {"value": "Black"},
-        "size": {"value": 5}
-      }
-    },
-    {
       "mark": {
         "type": "text",
         "align": "left",
